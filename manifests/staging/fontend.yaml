@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: stg-app-demo
-  namespace: staging
+  namespace: staging-demo
   labels:
     app: app-demo
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app-demo
-          image: rune-chan/spinnaker-app-demo:staging
+          image: runechang/spinnaker-app-demo:staging
           resources:
             requests:
               memory: "512Mi"
